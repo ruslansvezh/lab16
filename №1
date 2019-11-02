@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cmath>
+usingnamespacestd;
+int main()
+{
+	setlocale(0, "");
+	intN,i;
+	cout<<"Введите кол-во элементов массива: "<<endl;
+	cin>> N;
+
+	int* array = newint[N];
+	cout<<"Введите элементы массива: "<<endl;
+
+	for (i = 0; i < N; i++)
+	{
+		cin>> array[i];
+	}
+	int j = 0;
+	for (i = 1; i < N; i++)
+	{
+		if (array[j] != array[i])
+		{
+			j++;
+			array[j] = array[i];
+		}
+	}
+	cout<<"Измененныймассив: "<<endl;
+	for (i = 0; i <= j; i++)
+	{
+		cout<<array[i] <<endl;
+	}
